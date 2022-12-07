@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            var searchBar = document.createElement('input');
+            searchBar.setAttribute('type', 'text');
+            searchBar.setAttribute('id', 'searchBar');
+            searchBar.setAttribute('placeholder', 'Search');
+            document.body.appendChild(searchBar);
+
+            var searchButton = document.createElement('button');
+            searchButton.setAttribute('id', 'searchButton');
+            searchButton.innerHTML = 'Search';
+            document.body.appendChild(searchButton);
+
+            var searchResults = document.createElement('div');
+            searchResults.setAttribute('id', 'searchResults');
+            document.body.appendChild(searchResults);
+
+            var searchButton = document.getElementById('searchButton');
+            searchButton.addEventListener('click', function () {
+                var searchBar = document.getElementById('searchBar');
+                var searchResults = document.getElementById('searchResults');
+                searchResults.innerHTML = searchBar.value;
+                searchResults.style.fontSize = '100px';
+            });
+
+            var searchBar = document.getElementById('searchBar');
+            searchBar.addEventListener('keypress', function (e) {
+                if (e.keyCode == 13) {
+                    var searchResults = document.getElementById('searchResults');
+                    searchResults.innerHTML = searchBar.value;
+                    searchResults.style.fontSize = '100px';
+                }
+            });
+        });
+    </script>
+</head>
+
+<body style="margin: 0;">
+    <div
+   
+        
+        </div>
+    </div>
+</body>
+
+</html>
